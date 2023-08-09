@@ -1,0 +1,31 @@
+package Maps;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Iterating_the_values {
+
+	public static void main(String[] args) {
+		HashMap<Integer, String> hm = new HashMap<>();
+		hm.put(8, "G");
+		hm.put(2, "A");
+		hm.put(4, "N");
+		hm.put(6, "E");
+		hm.put(3, "S");
+		hm.put(0, "H");
+//		Iterating by using foreach
+		Set<Integer> keys=hm.keySet();
+		for(Integer i:keys) {
+			System.out.println(i+":"+hm.get(i));
+		}
+		System.out.println("**************");
+
+//		iterating by using Iterator
+		Iterator<Integer> i=keys.iterator();
+		while(i.hasNext()) {
+			System.out.println(i.next());
+		}
+	}
+
+}
