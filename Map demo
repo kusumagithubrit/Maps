@@ -1,0 +1,95 @@
+package Maps;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Set;
+
+public class MapDemo {
+
+	public static void main(String[] args) {
+		HashMap<Integer,String> hm=new HashMap<>();
+		
+//		<== put(Object key,Object value) ==>
+		
+		hm.put(1, "K");
+		hm.put(5, "U");
+		hm.put(2, "S");
+		hm.put(6, "U");
+		hm.put(7, "M");
+		hm.put(9, "A");
+		System.out.println(hm);
+		Hashtable<Integer,String> ht=new Hashtable<>();
+		
+//		<== put(Object key,Object value) ==>
+		
+		ht.put(8, "G");
+		ht.put(2, "A");
+		ht.put(4, "N");
+		ht.put(6, "E");
+		ht.put(3, "S");
+		ht.put(0, "H");
+		System.out.println(ht);
+		
+//		<== putAll(Map m) ==>
+		
+		hm.putAll(ht);
+		System.out.println(hm);
+		
+//		<== remove(Object key) ==>
+		
+		hm.remove(0);
+		System.out.println(hm);
+		
+//		<== remove(Object key,Object value) ==>
+		
+		hm.remove(1,"K");
+		System.out.println(hm);
+		
+//		<== containsKey(Object key) ==>
+		
+		hm.containsKey(0);
+		System.out.println(hm.containsKey(0));
+		
+//		<== containsValue(Object value,) ==>
+		
+		System.out.println(hm.containsValue("K"));
+		
+//		<== get(Object key) ==>
+		
+		System.out.println(hm.get(3));
+		
+//  	<== keySet() ==>
+		
+		Set<Integer> s=hm.keySet();
+		System.out.println(s);
+		
+//		<== valuesSet() ==>
+		
+		Collection<String> c=hm.values();
+		System.out.println(c);
+		
+//		<== entrySet() ==>
+		
+		Set entries=hm.entrySet();
+		System.out.println(entries);
+		
+//		<== isEmpty ==>
+		
+		System.out.println(hm.isEmpty());
+		
+//		<== size() ==>
+		
+		System.out.println(hm.size());
+		
+//		<== replace(Object key,Object value)>
+		
+		hm.replace(3, "Z");
+		System.out.println(hm);
+		
+//		<== clear() ==>
+		
+		hm.clear();
+		System.out.println(hm);
+	}
+}
